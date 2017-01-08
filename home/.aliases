@@ -1,0 +1,35 @@
+# Unix
+alias tlf="tail -f"
+alias ln='ln -v'
+alias mkdir='mkdir -p'
+alias ...='../..'
+alias l='ls -lh'
+alias ll='ls -Alh'
+alias grep='grep --colour=auto'
+alias -g G='| grep'
+alias -g M='| less'
+alias -g L='| wc -l'
+alias -g ONE="| awk '{ print \$1}'"
+
+# git
+alias g="git"
+
+# Bundler
+alias b="bundle"
+alias be="bundle exec"
+
+# Tests and Specs
+alias t="ruby -I test"
+alias s="bundle exec rspec"
+alias cuc="bundle exec cucumber"
+
+# Rubygems
+alias gi="gem install"
+alias giv="gem install -v"
+
+# MacVim
+alias mvim="mvim -v"
+
+# Only the best
+alias please="sudo !!"
+alias whats-my-ip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
