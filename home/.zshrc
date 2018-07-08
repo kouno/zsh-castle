@@ -47,6 +47,12 @@ plugins=(
   #vi-mode
 )
 
+
+# Local config
+[[ -f ~/.zshrc.local  ]] && source ~/.zshrc.local
+
+source $ZSH/oh-my-zsh.sh
+
 # vi mode
 bindkey -v
 bindkey "^F" vi-cmd-mode
@@ -108,9 +114,6 @@ which -s direnv && eval "$(direnv hook zsh)"
 # aliases
 [[ -f ~/.aliases  ]] && source ~/.aliases
 
-# Local config
-[[ -f ~/.zshrc.local  ]] && source ~/.zshrc.local
-
 # The next line updates PATH for the Google Cloud SDK.
 [[ -s "${HOME}/google-cloud-sdk/path.zsh.inc" ]] && source "${HOME}/google-cloud-sdk/path.zsh.inc"
 
@@ -119,6 +122,3 @@ which -s direnv && eval "$(direnv hook zsh)"
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Load Oh-my-zsh
-source $ZSH/oh-my-zsh.sh
