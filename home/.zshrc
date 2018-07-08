@@ -1,7 +1,7 @@
 echo "Sourcing ~/.zshrc..."
 
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/dotfiles/oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -46,8 +46,6 @@ plugins=(
   #rails
   #vi-mode
 )
-
-source $ZSH/oh-my-zsh.sh
 
 # vi mode
 bindkey -v
@@ -98,7 +96,7 @@ unsetopt nomatch
 # Don't autocomplete anymore
 unsetopt CORRECT_ALL
 
-source $HOME/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 PS1="$PS1"'$([ -n "$TMUX"  ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
@@ -119,3 +117,8 @@ which -s direnv && eval "$(direnv hook zsh)"
 [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Load Oh-my-zsh
+source $ZSH/oh-my-zsh.sh
