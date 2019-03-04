@@ -102,8 +102,6 @@ unsetopt nomatch
 # Don't autocomplete anymore
 unsetopt CORRECT_ALL
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 PS1="$PS1"'$([ -n "$TMUX"  ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 # Add completion from /usr/local/share/zsh
